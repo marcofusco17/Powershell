@@ -1,5 +1,5 @@
 ```Powershell
-· Codigo que ademas de guardar automaticamente, seguidamente borra la carpeta caliente.
+Codigo que ademas de guardar automaticamente, seguidamente borra la carpeta caliente.
 
 foreach($ficheros in (Get-ChildItem  "C:\xampp\htdocs\upload").name){
     
