@@ -1,14 +1,14 @@
 ```Powershell
 #Generamos el txt
 
-foreach ($directorio In Get-ChildItem -name D:\PROYECTOS) {
+foreach ($directorio In Get-ChildItem -name "Ruta del direcorio") {
  Write-host $directorio 
-du -nobanner "$directorio" | Out-File -FilePath D:\ocupacion3\"$directorio".txt 
+du -nobanner "$directorio" | Out-File -FilePath "la ruta donde vamos a generar el txt".txt 
 }
 
 #Comparamos el txt con el txt_old y lo guardamos 
 
-cmd /C "for %i in (C:\Users\MAFUSCO\Desktop\x) do fc *.txt *.txt_old %i"  >> C:\Users\MAFUSCO\Desktop\s\comparar.txt
+cmd /C "for %i in (Ruta donde están guardados los txt) do fc *.txt *.txt_old %i"  >> C:\Users\MAFUSCO\Desktop\s\comparar.txt
 
 #Borramos todos los txt_old
 
