@@ -17,7 +17,7 @@ Remove-Item -force d:\ocupacion\*.txt_old
 
 Get-ChildItem d:\ocupacion\*.txt | Rename-Item -NewName { $_.Name -replace '.txt','.txt_old' }
 ---------------------------------------------------------------------------------------------------------------------------------
-OTRA MANERA DE HACER ESTE SCRIPT 
+                         OTRA MANERA DE HACER ESTE SCRIPT 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Así estas controlado lo que ocupa cada carpeta todos los viernes, se mete todo en un excel y que nos calcule la diferencia.
