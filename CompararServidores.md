@@ -11,18 +11,18 @@ du -nobanner "$directorio" | Out-File -FilePath D:\ocupacion3\"$directorio".txt
 cmd /C "for %i in (C:\Users\MAFUSCO\Desktop\x) do fc *.txt *.txt_old %i"  >> C:\Users\MAFUSCO\Desktop\s\comparar.txt
 
 #Borramos todos los txt_old
+
 Remove-Item -force d:\ocupacion\*.txt_old
 
 #Renombraomos todos  los txt  a txt_old
 
 Get-ChildItem d:\ocupacion\*.txt | Rename-Item -NewName { $_.Name -replace '.txt','.txt_old' }
+
 ---------------------------------------------------------------------------------------------------------------------------------
                          OTRA MANERA DE HACER ESTE SCRIPT 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Así estas controlado lo que ocupa cada carpeta todos los viernes, se mete todo en un excel y que nos calcule la diferencia.
-
-
 
 $day = Get-Date -Format dd
 $month = Get-Date -Format MM
